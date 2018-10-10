@@ -24,7 +24,7 @@ class HangpersonGame
     elsif /[^a-zA-Z]+/.match? letter
       "Invalid guess."
     elsif letter.nil?
-      raise ArgumentError
+      "Invalid guess."
     elsif @guesses.include? letter.downcase
       "You have already used that letter."
     elsif @word.include? letter.downcase
