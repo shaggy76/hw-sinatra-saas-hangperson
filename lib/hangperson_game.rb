@@ -20,9 +20,9 @@ class HangpersonGame
 
   def guess(letter)
     if letter == ''
-      raise ArgumentError
+      "Invalid guess."
     elsif /[^a-zA-Z]+/.match? letter
-      raise ArgumentError
+      "Invalid guess."
     elsif letter.nil?
       raise ArgumentError
     elsif @guesses.include? letter.downcase
