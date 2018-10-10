@@ -26,13 +26,14 @@ class HangpersonGame
     elsif letter.nil?
       raise ArgumentError
     elsif @guesses.include? letter.downcase
-      false
+      "You have already used that letter."
     elsif @word.include? letter.downcase
       @guesses << letter.downcase
     elsif @wrong_guesses.include? letter.downcase
-      false
+      "You have already used that letter."
     else
       @wrong_guesses << letter.downcase
+      "Invalid guess."
     end
   end
 
